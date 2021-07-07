@@ -2,8 +2,11 @@ import java.util.Scanner;
 
 public class HipotenusHesaplama {
     public static void main(String[] args) {
-        int birinciKenar , ikincikenar;
-        double   hipotenus ;
+        int birinciKenar , ikinciKenar , ucuncuKenar , cevre , u;
+        double alan;
+
+
+
 
         Scanner inp = new Scanner(System.in);
 
@@ -11,11 +14,19 @@ public class HipotenusHesaplama {
         birinciKenar = inp.nextInt();
 
         System.out.println("İkinci kenarin uzunlugunu giriniz : ");
-        ikincikenar = inp.nextInt();
+        ikinciKenar = inp.nextInt();
 
-        hipotenus = Math.sqrt((birinciKenar*birinciKenar)+(ikincikenar*ikincikenar));
+        System.out.println("Ucuncu kenarin uzunlugunu giriniz : ");
+        ucuncuKenar = inp.nextInt();
 
-        System.out.println(hipotenus);
+        cevre = birinciKenar + ikinciKenar + ucuncuKenar ;
+
+        u = cevre / 2 ;
+
+        alan = Math.sqrt(u*(u-birinciKenar)*(u-ikinciKenar)*(u-ucuncuKenar));
+
+
+        System.out.println(alan);
 
 
 
